@@ -6,8 +6,6 @@ class ServerController extends BaseController
 {
     public function index()
     {
-        $servers = $this->forge->servers();
-
-        return view('anvil::cp.servers', ['servers'=> $servers]);
+        return view('anvil::cp.servers', ['servers'=> $this->forge->servers()]);
     }
 }
