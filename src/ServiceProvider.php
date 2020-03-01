@@ -19,8 +19,8 @@ class ServiceProvider extends AddonServiceProvider
 
         Nav::extend(function ($nav) {
             $nav->tools('Anvil')
-                ->route('anvil.servers')
-                ->icon('shopping-cart');
+                ->route('anvil.index')
+                ->icon('hammer-wrench');
         });
     }
 }
