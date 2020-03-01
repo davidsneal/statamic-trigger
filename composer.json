@@ -1,0 +1,23 @@
+{
+    "name": "silentz/anvil",
+    "type": "statamic-addon",
+    "require": {
+        "themsaid/forge-sdk": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Silentz\\Anvil\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Anvil",
+            "description": "Forge addon"
+        },
+        "laravel": {
+            "providers": [
+                "Silentz\\Anvil\\ServiceProvider"
+            ]
+        }
+    }
+}
