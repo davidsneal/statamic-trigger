@@ -3,7 +3,6 @@
 namespace Silentz\Anvil;
 
 use Statamic\Facades\Nav;
-use Statamic\CP\Navigation\NavItem;
 use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
@@ -20,7 +19,7 @@ class ServiceProvider extends AddonServiceProvider
 
         Nav::extend(function ($nav) {
             $nav->tools('Anvil')
-                ->route('anvil.index')
+                ->route('anvil.servers')
                 ->icon('shopping-cart');
         });
     }
