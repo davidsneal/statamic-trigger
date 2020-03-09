@@ -6,7 +6,7 @@
     <header class="mb-3">
 
         @include('statamic::partials.breadcrumb', [
-            'url' => cp_route('anvil.site'),
+            'url' => cp_route('utilities.anvil'),
             'title' => 'Anvil'
         ])
         <div class="flex items-center justify-between">

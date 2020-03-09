@@ -2,17 +2,14 @@
 
 namespace Silentz\Anvil;
 
-use Statamic\Facades\Nav;
 use Statamic\Facades\Utility;
 use Statamic\Providers\AddonServiceProvider;
 use Silentz\Anvil\Http\Controllers\SiteController;
+use Silentz\Anvil\Http\Controllers\Actions\DeploySiteController;
+use Silentz\Anvil\Http\Controllers\Actions\DeploymentLogController;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    protected $routes = [
-        'cp' => __DIR__.'/../routes/cp.php',
-    ];
-
     public function boot()
     {
         parent::boot();
@@ -23,10 +20,16 @@ class ServiceProvider extends AddonServiceProvider
             __DIR__.'/../config/anvil.php' => config_path('anvil.php'),
         ]);
 
-        Utility::make('anvil')
+        $utility = Utility::make('anvil')
             ->action(SiteController::class)
             ->icon('hammer-wrench')
-            ->description('Manage your Forge Site')
-            ->register();
+            ->description('Manage your Forge Site');
+
+        $utility->routes(function ($router) {
+            $router->post('deploy', [DeploySiteController::class, '__invoke'])->name('deploy');
+            $router->get('deployment-log', [DeploymentLogController::class, '__invoke'])->name('deployment-log');
+        });
+
+        $utility->register();
     }
 }

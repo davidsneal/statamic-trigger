@@ -20,7 +20,7 @@
                     <h2 class="font-bold">Deploy Site</h2>
                     <p class="my-1 text-sm text-grey">Deploy your site</p>
                 </div>
-                <form action="{{ cp_route('anvil.site.deploy') }}" method="POST">
+                <form action="{{ cp_route('utilities.anvil.deploy') }}" method="POST">
                     @csrf
                     <button class="btn">Deploy</button>
                 </form>
@@ -38,7 +38,7 @@
                     <h2 class="font-bold">Deployment Log</h2>
                     <p class="my-1 text-sm text-grey">See your latest deployment log</p>
                 </div>
-                <a href="{{ cp_route('anvil.site.deployment-log') }}" class="btn">View</a>
+                <a href="{{ cp_route('utilities.anvil.deployment-log') }}" class="btn">View</a>
             </div>
         </div>
 
