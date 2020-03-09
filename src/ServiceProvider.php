@@ -3,7 +3,9 @@
 namespace Silentz\Anvil;
 
 use Statamic\Facades\Nav;
+use Statamic\Facades\Utility;
 use Statamic\Providers\AddonServiceProvider;
+use Silentz\Anvil\Http\Controllers\SiteController;
 
 class ServiceProvider extends AddonServiceProvider
 {
@@ -17,10 +19,14 @@ class ServiceProvider extends AddonServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'anvil');
 
-        Nav::extend(function ($nav) {
-            $nav->tools('Anvil')
-                ->route('anvil.index')
-                ->icon('hammer-wrench');
-        });
+        $this->publishes([
+            __DIR__.'/../config/anvil.php' => config_path('anvil.php'),
+        ]);
+
+        Utility::make('anvil')
+            ->action(SiteController::class)
+            ->icon('hammer-wrench')
+            ->description('Manage your Forge Site')
+            ->register();
     }
 }
