@@ -6,12 +6,10 @@ use Silentz\Anvil\Http\Controllers\BaseController;
 
 class DeploySiteController extends BaseController
 {
-    public function __invoke(string $server, string $site)
+    public function __invoke()
     {
-        $site = $this->forge->site($server, $site);
+        $this->site->deploySite();
 
-        $site->deploySite();
-
-        return redirect(route('statamic.cp.anvil.sites', ['server'=> $server]))->with(['status'=>'Success']);
+        return redirect(route('statamic.cp.anvil.site'))->with(['status'=>'Success']);
     }
 }

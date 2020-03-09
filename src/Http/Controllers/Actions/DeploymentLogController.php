@@ -6,10 +6,10 @@ use Silentz\Anvil\Http\Controllers\BaseController;
 
 class DeploymentLogController extends BaseController
 {
-    public function __invoke(string $server, string $site)
+    public function __invoke()
     {
-        $log = $this->forge->siteDeploymentLog($server, $site);
+        $log = $this->forge->siteDeploymentLog(config('anvil.forge.server'), config('anvil.forge.site'));
 
-        return view('anvil::cp.deployment-log', ['log'=>$log, 'server'=>$server]);
+        return view('anvil::cp.deployment-log', ['log'=>$log]);
     }
 }
