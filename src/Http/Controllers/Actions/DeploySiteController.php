@@ -10,6 +10,6 @@ class DeploySiteController extends BaseController
     {
         $this->site->deploySite();
 
-        return redirect(route('statamic.cp.anvil.site'))->with(['status'=>'Success']);
+        return response('Success');
     }
 }
