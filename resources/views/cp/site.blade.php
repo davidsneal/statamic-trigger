@@ -15,21 +15,7 @@
     </header>
     <div class="p-0 card">
         <div class="p-2">
-            <div class="flex items-center justify-between">
-                <div class="pr-4">
-                    <h2 class="font-bold">Deploy Site</h2>
-                    <p class="my-1 text-sm text-grey">Deploy your site</p>
-                </div>
-                <form action="{{ cp_route('utilities.anvil.deploy') }}" method="POST">
-                    @csrf
-                    <button class="btn">Deploy</button>
-                </form>
-            </div>
-            <div class="flex text-sm text-grey">
-                <div class="badge-pill-sm">
-                    <span class="font-medium text-grey-80">Last Deployment:</span> HOW DO I GET THIS?
-                </div>
-            </div>
+            <deploy-site route="{{ cp_route('utilities.anvil.deploy') }}"></deploy-site>
         </div>
 
         <div class="p-2 border-t bg-grey-20">
