@@ -9,7 +9,7 @@
         </div>
         <div class="flex text-sm text-grey">
             <div class="badge-pill-sm">
-                <span class="font-medium text-grey-80">Last Deployment:</span> HOW DO I GET THIS?
+                <span class="font-medium text-grey-80">Last Deployment:</span> {{ this.localDeploymentDate }}
             </div>
         </div>
 
@@ -27,13 +27,16 @@
 
 <script>
     export default {
-        props: {
-            route: String
-        },
+        props: ["route", "lastDeployDate"],
         data() {
             return {
                 confirming: false
             };
+        },
+        computed: {
+            localDeplymentDate: function() {
+                return moment(this.lastDeployDate);
+            }
         },
         methods: {
             submit() {

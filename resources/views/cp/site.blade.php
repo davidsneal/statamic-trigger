@@ -15,7 +15,7 @@
     </header>
     <div class="p-0 card">
         <div class="p-2">
-            <deploy-site route="{{ cp_route('utilities.anvil.deploy') }}"></deploy-site>
+            <deploy-site route="{{ cp_route('utilities.anvil.deploy') }}" last-deploy-date="{{ $deployment['date'] }}"></deploy-site>
         </div>
 
         <div class="p-2 border-t bg-grey-20">
