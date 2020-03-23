@@ -34,7 +34,7 @@
             };
         },
         computed: {
-            localDeplymentDate: function() {
+            localDeploymentDate: function() {
                 return moment(this.lastDeployDate);
             }
         },
