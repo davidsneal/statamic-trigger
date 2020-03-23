@@ -1,6 +1,7 @@
 {
     "name": "edalzell/anvil",
     "type": "statamic-addon",
+    "license": "MIT",
     "require": {
         "themsaid/forge-sdk": "^2.0",
         "pixelfear/composer-dist-plugin": "^0.1.2"
