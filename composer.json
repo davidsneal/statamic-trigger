@@ -2,7 +2,8 @@
     "name": "edalzell/anvil",
     "type": "statamic-addon",
     "require": {
-        "themsaid/forge-sdk": "^2.0"
+        "themsaid/forge-sdk": "^2.0",
+        "pixelfear/composer-dist-plugin": "^0.1.2"
     },
     "autoload": {
         "psr-4": {
@@ -10,14 +11,18 @@
         }
     },
     "extra": {
-        "statamic": {
-            "name": "Anvil",
-            "description": "Forge addon"
+        "download-dist": {
+            "url": "https://github.com/edalzell/statamic-anvil/releases/download/{$version}/dist.tar.gz",
+            "path": "resources/dist"
         },
         "laravel": {
             "providers": [
                 "Edalzell\\Anvil\\ServiceProvider"
             ]
+        },
+        "statamic": {
+            "name": "Anvil",
+            "description": "Forge addon"
         }
     }
 }
