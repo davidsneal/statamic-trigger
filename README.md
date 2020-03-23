@@ -26,3 +26,6 @@ From the CP menu under Utilities:
 Once on the main screen you can Deploy your site, see your last deployment log or visit your site on Forge:
 
 ![main](https://github.com/edalzell/statamic-anvil/blob/master/img/main-screen.png?raw=true)
+
+
+Logo image credit: Photo by [Maranda Vandergriff](https://unsplash.com/@mkvandergriff?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge) on Unsplash
