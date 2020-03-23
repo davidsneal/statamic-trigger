@@ -1,6 +1,6 @@
 <?php
 
-namespace Silentz\Anvil\Http\Controllers;
+namespace Edalzell\Anvil\Http\Controllers;
 
 use Themsaid\Forge\Forge;
 use Themsaid\Forge\Resources\Site;

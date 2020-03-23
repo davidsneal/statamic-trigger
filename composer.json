@@ -1,12 +1,12 @@
 {
-    "name": "silentz/anvil",
+    "name": "edalzell/anvil",
     "type": "statamic-addon",
     "require": {
         "themsaid/forge-sdk": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "Silentz\\Anvil\\": "src"
+            "Edalzell\\Anvil\\": "src"
         }
     },
     "extra": {
@@ -16,7 +16,7 @@
         },
         "laravel": {
             "providers": [
-                "Silentz\\Anvil\\ServiceProvider"
+                "Edalzell\\Anvil\\ServiceProvider"
             ]
         }
     }

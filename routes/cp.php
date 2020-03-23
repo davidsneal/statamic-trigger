@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Silentz\Anvil\Http\Controllers\SiteController;
-use Silentz\Anvil\Http\Controllers\Actions\DeploySiteController;
-use Silentz\Anvil\Http\Controllers\Actions\DeploymentLogController;
+use Edalzell\Anvil\Http\Controllers\SiteController;
+use Edalzell\Anvil\Http\Controllers\Actions\DeploySiteController;
+use Edalzell\Anvil\Http\Controllers\Actions\DeploymentLogController;
 
 Route::name('anvil.')->prefix('anvil')->group(function () {
     Route::get('/', [SiteController::class, '__invoke'])->name('index');

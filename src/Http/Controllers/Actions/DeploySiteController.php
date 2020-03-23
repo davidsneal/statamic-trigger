@@ -1,8 +1,8 @@
 <?php
 
-namespace Silentz\Anvil\Http\Controllers\Actions;
+namespace Edalzell\Anvil\Http\Controllers\Actions;
 
-use Silentz\Anvil\Http\Controllers\BaseController;
+use Edalzell\Anvil\Http\Controllers\BaseController;
 
 class DeploySiteController extends BaseController
 {
