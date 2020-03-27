@@ -4,7 +4,7 @@ Allows you to deploy your Forge site and see the latest deployment log
 
 ## Install
 
-1. From your site folder, run `composer require edalzell\anvil`
+1. From your site folder, run `composer require edalzell/anvil`
 
 ## Configure
 
