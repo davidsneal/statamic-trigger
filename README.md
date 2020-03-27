@@ -4,11 +4,11 @@ Allows you to deploy your Forge site and see the latest deployment log
 
 ## Install
 
-1. From your site folder, run `composer require edalzell\anvil`
+1. From your site folder, run `composer require edalzell/anvil`
 
 ## Configure
 
-1. Publish the configuration, `php artisan vendor:publish --vendor=Edalzell\Anvil\ServiceProvider`
+1. Publish the configuration, `php artisan vendor:publish --provider=Edalzell\Anvil\ServiceProvider`
 2. Add your Forge [token](https://forge.laravel.com/user/profile#/api), server & site id to your `.env` file:
 
 ```
