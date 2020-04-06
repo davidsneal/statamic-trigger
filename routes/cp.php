@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Edalzell\Anvil\Http\Controllers\SiteController;
-use Edalzell\Anvil\Http\Controllers\Actions\DeploySiteController;
-use Edalzell\Anvil\Http\Controllers\Actions\DeploymentLogController;
+use Davidsneal\Trigger\Http\Controllers\SiteController;
+use Davidsneal\Trigger\Http\Controllers\Actions\DeploySiteController;
+use Davidsneal\Trigger\Http\Controllers\Actions\DeploymentLogController;
 
-Route::name('anvil.')->prefix('anvil')->group(function () {
+Route::name('trigger.')->prefix('trigger')->group(function () {
     Route::get('/', [SiteController::class, '__invoke'])->name('index');
     Route::get('/site', [SiteController::class, '__invoke'])->name('site');
     Route::name('site.')->prefix('site')->group(function () {

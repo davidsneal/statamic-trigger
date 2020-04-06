@@ -1,21 +1,21 @@
 @extends('statamic::layout')
 
-@section('title', 'Forge')
+@section('title', 'Trigger')
 
 @section('content')
     <header class="mb-3">
 
         @include('statamic::partials.breadcrumb', [
-            'url' => cp_route('utilities.anvil'),
-            'title' => 'Anvil'
+            'url' => cp_route('utilities.index'),
+            'title' => __('Utilities')
         ])
         <div class="flex items-center justify-between">
-            <h1>Deployment Log</h1>
+            <h1>Trigger</h1>
         </div>
     </header>
     <div class="p-0 card">
-        <div class="p-2 mt-3 text-sm bg-white rounded text-grey-80">
-            {!! nl2br($log) !!}
+        <div class="p-2">
+            <deploy-site route="{{ $route }}"></deploy-site>
         </div>
     </div>
 @endsection

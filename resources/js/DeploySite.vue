@@ -7,49 +7,45 @@
             </div>
             <button @click.prevent="confirming = true" class="btn">Deploy</button>
         </div>
-        <div class="flex text-sm text-grey">
-            <div class="badge-pill-sm">
-                <span class="font-medium text-grey-80">Last Deployment:</span> {{ this.localDeploymentDate }}
-            </div>
-        </div>
-
         <confirmation-modal
             v-if="confirming"
             title="Deploy your site"
             bodyText="Are you sure you want to deploy your site?"
             buttonText="Deploy"
             danger="true"
-            @confirm="submit()"
+            @confirm="submit"
             @cancel="confirming = false"
         />
     </div>
 </template>
 
 <script>
-    export default {
-        props: ["route", "lastDeployDate"],
-        data() {
-            return {
-                confirming: false
-            };
-        },
-        computed: {
-            localDeploymentDate: function() {
-                return moment(this.lastDeployDate);
-            }
-        },
-        methods: {
-            submit() {
-                this.$axios
-                    .post(this.route)
-                    .then(response => {
-                        this.confirming = false;
-                        this.$toast.success(__("Site deployed"));
-                    })
-                    .catch(function(error) {
-                        console.log(error);
-                    });
-            }
-        }
-    };
+  export default {
+    props: {
+      route: {
+        type: String,
+        default: '',
+      },
+    },
+
+    data() {
+      return {
+        confirming: false,
+      }
+    },
+
+    methods: {
+      submit() {
+        this.$axios.post(this.route)
+          .then(response => {
+            this.confirming = false;
+            this.$toast.success(__('Trigger successfull'))
+          })
+          .catch((error) => {
+            this.$toast.error(__('Trigger failed'))
+            console.log(error)
+          })
+      },
+    },
+  }
 </script>

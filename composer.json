@@ -1,29 +1,24 @@
 {
-    "name": "edalzell/anvil",
+    "name": "davidsneal/trigger",
     "type": "statamic-addon",
     "license": "MIT",
-    "require": {
-        "themsaid/forge-sdk": "^2.0",
-        "pixelfear/composer-dist-plugin": "^0.1.2"
-    },
     "autoload": {
         "psr-4": {
-            "Edalzell\\Anvil\\": "src"
+            "Davidsneal\\Trigger\\": "src"
         }
     },
     "extra": {
-        "download-dist": {
-            "url": "https://github.com/edalzell/statamic-anvil/releases/download/{$version}/dist.tar.gz",
-            "path": "resources/dist"
-        },
         "laravel": {
             "providers": [
-                "Edalzell\\Anvil\\ServiceProvider"
+                "Davidsneal\\Trigger\\ServiceProvider"
             ]
         },
         "statamic": {
-            "name": "Anvil",
-            "description": "Forge addon"
+            "name": "Trigger",
+            "description": "Trigger a deployment via POST"
         }
+    },
+    "require": {
+        "kitetail/zttp": "^0.6.0"
     }
 }
