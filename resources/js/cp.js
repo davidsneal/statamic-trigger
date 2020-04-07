@@ -1,5 +1,5 @@
-import DeploySite from './DeploySite.vue';
+import TriggerAddon from './TriggerAddon.vue';
 
 Statamic.booting(() => {
-    Statamic.$components.register('deploy-site', DeploySite)
+    Statamic.$components.register('trigger-addon', TriggerAddon)
 })

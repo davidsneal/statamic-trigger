@@ -1,11 +1,28 @@
 {
     "name": "davidsneal/trigger",
+    "description": "A simple URL Trigger for Statamic v3.",
+    "keywords": [
+        "Statamic",
+        "Addon",
+        "Trigger"
+    ],
     "type": "statamic-addon",
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Davidsneal\\Trigger\\": "src"
         }
+    },
+    "authors": [
+        {
+        "name": "David Neal"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "6.*",
+        "kitetail/zttp": "^0.6.0",
+        "statamic/cms": "3.*@beta"
     },
     "extra": {
         "laravel": {
@@ -17,8 +34,5 @@
             "name": "Trigger",
             "description": "Trigger a deployment via POST"
         }
-    },
-    "require": {
-        "kitetail/zttp": "^0.6.0"
     }
 }

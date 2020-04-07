@@ -6,8 +6,6 @@ class SiteController extends BaseController
 {
     public function __invoke()
     {
-        return view('trigger::cp.trigger', [
-            'route' => route('statamic.cp.utilities.trigger.trigger'),
-        ]);
+        return view('trigger::cp.trigger');
     }
 }
